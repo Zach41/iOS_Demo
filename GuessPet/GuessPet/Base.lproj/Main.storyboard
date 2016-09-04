@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KAD-Ql-EBu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="zTF-Ic-TW6">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="KAD-Ql-EBu" customClass="PageViewController" customModule="GuessPet" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jb2-3o-J2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="481"/>
+        </scene>
+        <!--Card View Controller-->
+        <scene sceneID="vuF-kt-xXh">
+            <objects>
+                <viewController storyboardIdentifier="CardViewController" id="67c-cj-v9S" userLabel="Card View Controller" customClass="CardViewController" customModule="GuessPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dAJ-Gl-FaI"/>
+                        <viewControllerLayoutGuide type="bottom" id="MQv-4x-nmf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vQj-zX-wLK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paz-xO-So7" userLabel="Card View">
+                                <rect key="frame" x="188" y="150" width="225" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOJ-nb-eDO" userLabel="Title">
+                                        <rect key="frame" x="92" y="140" width="42" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="paz-xO-So7" secondAttribute="width" multiplier="4:3" id="Aod-Lw-Qz5"/>
+                                    <constraint firstItem="wOJ-nb-eDO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="paz-xO-So7" secondAttribute="leading" constant="20" id="QHI-IV-HAt"/>
+                                    <constraint firstItem="wOJ-nb-eDO" firstAttribute="centerY" secondItem="paz-xO-So7" secondAttribute="centerY" id="nzR-cV-eba"/>
+                                    <constraint firstItem="wOJ-nb-eDO" firstAttribute="centerX" secondItem="paz-xO-So7" secondAttribute="centerX" id="rpw-F6-kII"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wOJ-nb-eDO" secondAttribute="trailing" constant="20" id="s4L-JS-ffQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="paz-xO-So7" firstAttribute="centerY" secondItem="vQj-zX-wLK" secondAttribute="centerY" id="CPt-XT-r4e"/>
+                            <constraint firstItem="paz-xO-So7" firstAttribute="height" secondItem="vQj-zX-wLK" secondAttribute="height" multiplier="1/2" id="KFc-i4-eNF"/>
+                            <constraint firstItem="paz-xO-So7" firstAttribute="centerX" secondItem="vQj-zX-wLK" secondAttribute="centerX" id="Otq-t0-l1e"/>
+                            <constraint firstItem="paz-xO-So7" firstAttribute="width" secondItem="vQj-zX-wLK" secondAttribute="height" multiplier="4:3" id="WD2-f4-sIn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WD2-f4-sIn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="paz-xO-So7" id="BbK-0P-DUG"/>
+                        <outlet property="titleLabel" destination="wOJ-nb-eDO" id="mMb-e5-2KI"/>
+                        <segue destination="5cu-pg-iBj" kind="presentation" identifier="revealSegue" id="Rhe-WJ-C0j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lmn-gQ-jVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="486"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="wRw-xN-o8X">
+            <objects>
+                <viewController id="5cu-pg-iBj" customClass="RevealViewController" customModule="GuessPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="asX-Od-3xq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jv9-zV-1YJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6J6-XD-47a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ICD-tx-2MN">
+                                <rect key="frame" x="132" y="75" width="337" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ICD-tx-2MN" secondAttribute="height" multiplier="3:4" id="TuE-Wg-luh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20z-JU-6Kf">
+                                <rect key="frame" x="277" y="44" width="47" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.59742030201342278" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVZ-3U-EQP">
+                                <rect key="frame" x="261" y="568" width="78" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.0" green="0.59742030199999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissPressed:" destination="5cu-pg-iBj" eventType="touchUpInside" id="X7t-cC-EHd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ICD-tx-2MN" firstAttribute="centerY" secondItem="6J6-XD-47a" secondAttribute="centerY" id="3uT-7c-zxL"/>
+                            <constraint firstItem="ICD-tx-2MN" firstAttribute="height" secondItem="6J6-XD-47a" secondAttribute="height" multiplier="3/4" id="Ofd-LS-RhC"/>
+                            <constraint firstItem="ICD-tx-2MN" firstAttribute="top" secondItem="20z-JU-6Kf" secondAttribute="bottom" constant="8" id="XON-oC-bzw"/>
+                            <constraint firstItem="CVZ-3U-EQP" firstAttribute="centerX" secondItem="6J6-XD-47a" secondAttribute="centerX" id="bxF-zN-Hoq"/>
+                            <constraint firstItem="20z-JU-6Kf" firstAttribute="centerX" secondItem="6J6-XD-47a" secondAttribute="centerX" id="eWH-qk-t3u"/>
+                            <constraint firstItem="ICD-tx-2MN" firstAttribute="centerX" secondItem="6J6-XD-47a" secondAttribute="centerX" id="vKx-jJ-17K"/>
+                            <constraint firstItem="Jv9-zV-1YJ" firstAttribute="top" secondItem="CVZ-3U-EQP" secondAttribute="bottom" id="vqw-Z2-9Q1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ICD-tx-2MN" id="5om-1D-ZTP"/>
+                        <outlet property="titleLabel" destination="20z-JU-6Kf" id="amJ-r3-UzC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtF-he-2mp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="486"/>
+        </scene>
+    </scenes>
+</document>
