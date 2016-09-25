@@ -11,3 +11,9 @@
 ### 自定义的ViewController Transition
 
 ![preview](GuessPet/preview.gif)
+
+### Indicator View
+
+学习了[NVAcitivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)的实现，它的代码结构设计个人感觉很棒
+
+![preview](IndicatorViewDemo/preview.gif)
