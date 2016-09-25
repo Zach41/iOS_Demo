@@ -16,6 +16,8 @@
 		9213472F1D9662D20025A4A8 /* IndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213472E1D9662D10025A4A8 /* IndicatorAnimationDelegate.swift */; };
 		921347311D9663470025A4A8 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921347301D9663470025A4A8 /* IndicatorView.swift */; };
 		921347341D9663E80025A4A8 /* IndicatorAnimationPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921347331D9663E80025A4A8 /* IndicatorAnimationPacman.swift */; };
+		921347361D96AE1A0025A4A8 /* IndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921347351D96AE1A0025A4A8 /* IndicatorPresenter.swift */; };
+		921347381D96B9960025A4A8 /* IndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921347371D96B9960025A4A8 /* IndicatorViewable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9213472E1D9662D10025A4A8 /* IndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndicatorAnimationDelegate.swift; path = IndicatorView/IndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
 		921347301D9663470025A4A8 /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndicatorView.swift; path = IndicatorView/IndicatorView.swift; sourceTree = "<group>"; };
 		921347331D9663E80025A4A8 /* IndicatorAnimationPacman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndicatorAnimationPacman.swift; path = IndicatorView/Animations/IndicatorAnimationPacman.swift; sourceTree = "<group>"; };
+		921347351D96AE1A0025A4A8 /* IndicatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndicatorPresenter.swift; path = IndicatorView/IndicatorPresenter.swift; sourceTree = "<group>"; };
+		921347371D96B9960025A4A8 /* IndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorViewable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				9213472C1D9660290025A4A8 /* IndicatorViewShape.swift */,
 				9213472E1D9662D10025A4A8 /* IndicatorAnimationDelegate.swift */,
 				921347301D9663470025A4A8 /* IndicatorView.swift */,
+				921347351D96AE1A0025A4A8 /* IndicatorPresenter.swift */,
+				921347371D96B9960025A4A8 /* IndicatorViewable.swift */,
 			);
 			name = IndicatorView;
 			sourceTree = "<group>";
@@ -167,9 +173,11 @@
 			files = (
 				9213472D1D9660290025A4A8 /* IndicatorViewShape.swift in Sources */,
 				921347191D965E770025A4A8 /* ViewController.swift in Sources */,
+				921347361D96AE1A0025A4A8 /* IndicatorPresenter.swift in Sources */,
 				921347341D9663E80025A4A8 /* IndicatorAnimationPacman.swift in Sources */,
 				9213472F1D9662D20025A4A8 /* IndicatorAnimationDelegate.swift in Sources */,
 				921347171D965E770025A4A8 /* AppDelegate.swift in Sources */,
+				921347381D96B9960025A4A8 /* IndicatorViewable.swift in Sources */,
 				921347311D9663470025A4A8 /* IndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +340,7 @@
 				921347271D965E770025A4A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

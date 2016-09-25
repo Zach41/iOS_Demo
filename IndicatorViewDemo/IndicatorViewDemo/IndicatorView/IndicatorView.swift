@@ -27,6 +27,11 @@ class IndicatorView: UIView {
     
     public static var DEFAULT_PADDING : CGFloat = 0
     
+    public static var DEFAULT_DELAY : CFTimeInterval = 0
+    
+    public static var DEFAULT_SIZE : CGSize = CGSize(width: 60, height: 60)
+    
+    
     public var type = IndicatorView.DEFAULT_TYPE
     
     public var color = IndicatorView.DEFAULT_COLOR
